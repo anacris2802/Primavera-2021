@@ -27,7 +27,7 @@ El Proyecto consta de distintos escenarios, cada uno con sus supuestos particula
 1) [Combate entre guerrillas](#combate-entre-guerrillas)
 2) [Vietnam](#vietnam)
 3) [Combate convencional](#combate-convencional)
-4) [Esparta] (#esparta)
+4) [Esparta](#esparta)
 
 ### Combate entre guerrillas
 
