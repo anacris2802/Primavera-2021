@@ -11,7 +11,7 @@
 * [Ejemplo de uso](*ejemplo-de-uso)
     
     
----
+
 ## Información general
 Para modelar las batallas, se usan las [*Leyes de Lanchester*]:
 
