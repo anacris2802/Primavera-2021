@@ -5,9 +5,9 @@
 ---
 # Contenido:
 
-* [Información general](*informacion-general)
-* [Escenarios](*escenarios)
-* [Técnicas usadas](*tecnicas-usadas)
+* [Información general](*información-general)
+* [Escenarios](*Escenarios)
+* [Técnicas usadas](*Técnicas-usadas)
 * [Ejemplo de uso](*ejemplo-de-uso)
     
     
