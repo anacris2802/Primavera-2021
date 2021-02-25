@@ -89,9 +89,7 @@ Es así como todo el proyecto puede resolverse de una manera práctica y rápida
 Gracias a Python, el programar una función que nos explique y nos demuestre como se ve un proceso a través del tiempo es muy sencillo. 
 Normalmente, los pasos que se siguen son: 
 
-![alt text](/Comunicación Escrita/Images/Pasos_Proyecto.jpg)
-
-![alt text]("https://github.com/anacris2802/Primavera-2021/blob/main/Comunicaci%C3%B3n%20Escrita/Images/Pasos_Proyecto.jpg")
+![](https://github.com/anacris2802/Primavera-2021/blob/main/Comunicaci%C3%B3n%20Escrita/Images/Pasos_Proyecto.jpg)
 
 Siguiendo esta estructura general, el graficar un proceso a través de un tiempo t es relativamente sencillo. 
 
@@ -115,7 +113,7 @@ Particularmente para el proyecto ocupamos el modelado basado en agentes para sim
 ## Ejemplo de uso
 El proyecto se encuentra en un Jupyter Notebook, por lo que es necesario ejecutarlo para que pueda funcionar. Una vez hecho esto, podemos observar que las gráficas interactivas cuentan con barras en la parte superior dónde podemos deslizar el punto para cambiar los valores:
 
-![alt text](Comunicación\ Escrita/Images/imagen_proyecto.jpg)
+![](https://github.com/anacris2802/Primavera-2021/blob/main/Comunicaci%C3%B3n%20Escrita/Images/imagen_proyecto.jpg)
 
 Así, podemos personalizar las batallas y ver los distintos resultados que pueden ocasionar el tener menos o más tropas, menor o mayor potencia de ataque, etc. 
 
