@@ -5,10 +5,10 @@
 ---
 # Contenido:
 
-* [Información general](*información-general)
-* [Escenarios](*Escenarios)
-* [Técnicas usadas](*Técnicas-usadas)
-* [Ejemplo de uso](*ejemplo-de-uso)
+* [Información general](#información-general)
+* [Escenarios](#escenarios)
+* [Técnicas usadas](#técnicas-usadas)
+* [Ejemplo de uso](#ejemplo-de-uso)
     
     
 
@@ -114,7 +114,8 @@ Particularmente para el proyecto ocupamos el modelado basado en agentes para sim
 ---
 ## Ejemplo de uso
 El proyecto se encuentra en un Jupyter Notebook, por lo que es necesario ejecutarlo para que pueda funcionar. Una vez hecho esto, podemos observar que las gráficas interactivas cuentan con barras en la parte superior dónde podemos deslizar el punto para cambiar los valores:
-![alt text](Comunicación Escrita/Images/imagen_proyecto.jpg)
+
+![alt text](Comunicación\ Escrita/Images/imagen_proyecto.jpg)
 
 Así, podemos personalizar las batallas y ver los distintos resultados que pueden ocasionar el tener menos o más tropas, menor o mayor potencia de ataque, etc. 
 
