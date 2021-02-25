@@ -1,33 +1,42 @@
 # This is War!
 
-El objetivo de este proyecto es simular una batalla de manera muy simple utilizando Python. Para hacerlo, se usan las [*Leyes de Lanchester*]:
+El objetivo de este proyecto es simular distintos escenarios de batalla utilizando ecuaciones diferenciales implementadas en Python. 
+
+---
+# Contenido:
+
+* [Información general](*información-general)
+* [Escenarios](*escenarios)
+* [Técnicas usadas](*técnicas-usadas)
+* [Ejemplo de uso](*ejemplo-de-uso)
+    
+    
+---
+## Información general
+Para modelar las batallas, se usan las [*Leyes de Lanchester*]:
 
   <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -ay ">
   
   <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bx ">
   
   con condiciones iniciales  <img src="https://render.githubusercontent.com/render/math?math=x(0) = x_0"> y  <img src="https://render.githubusercontent.com/render/math?math=y(0) = y_0">.
-    
-    
-Los supuestos básicos del proyecto fueron: 
+  
+Los supuestos básicos del proyecto son: 
 * Hay dos contrincantes: azules y rojos
 * Los principales factores que deciden el resultado de la batalla son el número de tropas y el entrenamiento/equipo.
 * Se tomaron <img src="https://render.githubusercontent.com/render/math?math=x"> como el número de tropas de los rojos y <img src="https://render.githubusercontent.com/render/math?math=y"> como el número de tropas de los azules.
 * Se tomaron <img src="https://render.githubusercontent.com/render/math?math=a"> como la potencia de fuego de los rojos y <img src="https://render.githubusercontent.com/render/math?math=b"> como la potencia de fuego de los azules.
 * La potencia de fuego está basada en el entrenamiento, equipo, etc.
 
-El Proyecto consta de distintos escenarios, cada uno con sus supuestos particulares. Las secciones en las que se divide es:
+---
+## Escenarios
+El Proyecto consta de distintos escenarios, cada uno con sus supuestos particulares. Las secciones en las que se divide son:
 1) [Combate sencillo](#combate-sencillo)
 2) [Combate entre guerrillas](#combate-entre-guerrillas)
 3) [Vietnam](#vietnam)
 4) [Combate convencional](#combate-convencional)
 5) [Esparta](#esparta)
 
-Así mismo, se usan varias técnicas en Python, como son:
-* [Resolución de ecuaciones diferenciales](#resolución-de-ecuaciones-diferenciales)
-* [Visualización de un proceso a través del tiempo](#visualización-de-un-proceso-a-través-del-tiempo)
-* [Graficación interactiva](#graficación-interactiva)
-* [Modelación usando agentes](#modelación-usando-agentes)
 
 ### Combate sencillo
 En esta sección, los supuestos son los mismos a los generales. Las dos tropas conocen la ubicación del 'enemigo' y disparan con una potencia de fuego determinada previamente. 
@@ -77,6 +86,25 @@ Aquí se simula la batalla de Termópilas. Se supone que solo <img src="https://
 <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -a \min(y,C)"> 
 <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -b \min(x,C)"> 
 
+
+
+
+---
+## Técnicas usada
+
+El proyecto toca varios temas dentro del propóstio principal que es modelar batallas. Estos temas son:
+
+* [Resolución de ecuaciones diferenciales](#resolución-de-ecuaciones-diferenciales)
+* [Visualización de un proceso a través del tiempo](#visualización-de-un-proceso-a-través-del-tiempo)
+* [Graficación interactiva](#graficación-interactiva)
+* [Modelación usando agentes](#modelación-usando-agentes)
+
+Todos estos temas pudieron ocuparse gracias a las siguientes librerias de Python:
+* [NumPy](https://numpy.org/doc/stable/user/whatisnumpy.html)
+* [SimPy](https://simpy.readthedocs.io/en/latest/)
+* [Matplotlib](https://matplotlib.org/stable/index.html)
+* [iPyWidgets](https://ipywidgets.readthedocs.io/en/stable/examples/Widget%20Basics.html)
+* [IPython.display](https://ipython.org/ipython-doc/stable/api/generated/IPython.display.html)
 
 ### Resolución de ecuaciones diferenciales
 ### Visualización de un proceso a través del tiempo
