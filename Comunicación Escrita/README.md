@@ -120,4 +120,4 @@ Así, podemos personalizar las batallas y ver los distintos resultados que puede
 Espero disfrutes de jugar con las gráficas y los escenarios tanto como nosotros al crearlo! 
 
 
-[*Leyes de Lanchester*]:https://es.wikipedia.org/wiki/Leyes_de_Lanchester#:~:text=Las%20leyes%20de%20Lanchester%20(en,fuego%20en%20funci%C3%B3n%20del%20tiempo.
+>[*Leyes de Lanchester*]:https://es.wikipedia.org/wiki/Leyes_de_Lanchester#:~:text=Las%20leyes%20de%20Lanchester%20(en,fuego%20en%20funci%C3%B3n%20del%20tiempo.
