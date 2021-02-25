@@ -22,16 +22,16 @@ Para modelar las batallas, se usan las [*Leyes de Lanchester*]:
   con condiciones iniciales  <img src="https://render.githubusercontent.com/render/math?math=x(0) = x_0"> y  <img src="https://render.githubusercontent.com/render/math?math=y(0) = y_0">.
   
 Los supuestos básicos del proyecto son: 
-* Hay dos contrincantes: azules y rojos
+* Los contrincantes son dos: azules y rojos
 * Los principales factores que deciden el resultado de la batalla son el número de tropas y el entrenamiento/equipo.
-* Se tomaron <img src="https://render.githubusercontent.com/render/math?math=x"> como el número de tropas de los rojos y <img src="https://render.githubusercontent.com/render/math?math=y"> como el número de tropas de los azules.
-* Se tomaron <img src="https://render.githubusercontent.com/render/math?math=a"> como la potencia de fuego de los rojos y <img src="https://render.githubusercontent.com/render/math?math=b"> como la potencia de fuego de los azules.
+* El número de tropas azules y rojas son <img src="https://render.githubusercontent.com/render/math?math=x"> y <img src="https://render.githubusercontent.com/render/math?math=y"> respectivamente.
+* La potencia de fuego azul y roja es <img src="https://render.githubusercontent.com/render/math?math=a"> y <img src="https://render.githubusercontent.com/render/math?math=b"> respectivamente.
 * La potencia de fuego está basada en el entrenamiento, equipo, etc.
 
 ---
 ## Escenarios
 El Proyecto consta de distintos escenarios, cada uno con sus supuestos particulares. Las secciones en las que se divide son:
-1) [Combate sencillo](#combate-sencillo)
+1) [Combate sencillo](#combate sencillo)
 2) [Combate entre guerrillas](#combate-entre-guerrillas)
 3) [Vietnam](#vietnam)
 4) [Combate convencional](#combate-convencional)
@@ -58,9 +58,9 @@ Este modelo representa el combate de 2 fuerzas que no tienen la ubicación de la
 
 
 ### Vietnam
-Este modelo es la unión del combate sencillo y del combate entre guerrillas. Una de las dos tropas es atacada por sopresa, de manera que la fuerza que embosca tiene más ventaja sobre la emboscada. Particularmente representa la batalla de EE.UU. y Vietcong. Aquí, Vietcong tiene la ventaja de ser 'local' y conocer el territorio por lo que toma el papel de fuerza 'emboscasora', mientras que EE.UU. es tomada por sopresa. 
+Este modelo es la unión del combate sencillo y del combate entre guerrillas. Una de las dos tropas es atacada por sopresa, de manera que la fuerza que embosca tiene más ventaja sobre la emboscada. Particularmente representa la batalla de EE.UU. y Vietcong. Aquí, Vietcong tiene la ventaja de ser local y conocer el territorio por lo que toma el papel de fuerza emboscadora, mientras que EE.UU. es tomada por sorpresa. 
 
-Con este escenario, podemos ver que las fuerzas pequeñas pueden tener una ventaja sobre las fuerzas grandes cuando se les ataca por sorpresa. 
+Con este escenario, podemos ver que fuerzas pequeñas pueden tener una ventaja sobre fuerzas grandes cuando se les ataca por sorpresa. 
 
 ##### Ecuaciones
 
@@ -70,7 +70,7 @@ Con este escenario, podemos ver que las fuerzas pequeñas pueden tener una venta
 
 ### Combate convencional
 
-Aquí tomamos el supuesto de que la tropas pueden recibir refuerzos. Usamos una función escalonada para modelar el número de refuerzos que llegan en cierto perodo de tiempo. Gracias a esto, los resultados de las batallas se ven más realistas a las que conocemos. 
+Aquí tomamos el supuesto de que la tropas pueden recibir refuerzos. Usamos una función escalonada para modelar el número de refuerzos que llegan en cierto periodo de tiempo. Gracias a esto, los resultados de las batallas se ven más realistas a las que conocemos. 
 
 ##### Ecuaciones
 
@@ -95,14 +95,14 @@ Aquí se simula la batalla de Termópilas. Se supone que solo <img src="https://
 ---
 ## Técnicas usadas
 
-El proyecto toca varios temas dentro del propóstio principal que es modelar batallas. Estos temas son:
+El proyecto toca varios temas aparte del propósito principal que es modelar batallas. Estos contenidos son:
 
 * [Ecuaciones diferenciales](#ecuaciones-diferenciales)
 * [Procesos a través del tiempo](#procesos-a-través-del-tiempo)
 * [Gráficas interactivas](#graficas-interactivas)
 * [Modelos basados en agentes](#modelos-basados-en-agentes)
 
-Todos estos temas pudieron ocuparse gracias a las siguientes librerias de Python:
+Todos estos temas pudieron ocuparse gracias a las siguientes librerías de Python:
 * [NumPy](https://numpy.org/doc/stable/user/whatisnumpy.html)
 * [SimPy](https://simpy.readthedocs.io/en/latest/)
 * [Matplotlib](https://matplotlib.org/stable/index.html)
@@ -110,7 +110,7 @@ Todos estos temas pudieron ocuparse gracias a las siguientes librerias de Python
 * [IPython.display](https://ipython.org/ipython-doc/stable/api/generated/IPython.display.html)
 
 ### Ecuaciones diferenciales
-El resolver ecuaciones diferenciales de primer orden es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la libreria *SimPy*. Un ejemplo del código es este: 
+El resolver ecuaciones diferenciales de primer orden es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la librería *SimPy*. Un ejemplo del código es este: 
 ```python
 ode1 = Eq(dx,-a*y1(t))    # Declaramos la ecuación diferencial que queremos resolver
 dsolve(ode1)              # Resolvemos con el método de SimPy
@@ -131,8 +131,8 @@ Normalmente, los pasos que se siguen son:
 
 Siguiendo esta estructura general, el graficar un proceso a través de un tiempo t es relativamente sencillo. 
 
-### Gráficas interactivasa
-Esta es una funcionalidad que da la libreria *iPyWidgets*. Gracias a esto, podemos no solo graficar funciones, si no que podemos jugar con los parámetros y darles el valor que nosotros queramos mientras se encuentren en el intervalo dado. 
+### Gráficas interactivas
+Esta es una funcionalidad que da la librería *iPyWidgets*. Gracias a esto, podemos no solo graficar funciones, si no que podemos jugar con los parámetros y darles el valor que nosotros queramos mientras se encuentren en el intervalo dado. 
 Para usarlo, tenemos que tener una función en donde se de la orden de graficar cierta situación. Una vez con esto, usamos la función `interact()`:
 ```python
 interact(plotModelo,a=(0,100),r=(0,100),pa=(0,100),pr=(0,100))
