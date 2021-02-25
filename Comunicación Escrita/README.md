@@ -28,7 +28,7 @@ Los supuestos básicos del proyecto son:
 * La potencia de fuego azul y roja es <img src="https://render.githubusercontent.com/render/math?math=a"> y <img src="https://render.githubusercontent.com/render/math?math=b"> respectivamente.
 * La potencia de fuego está basada en el entrenamiento, equipo, etc.
 
----
+
 ## Escenarios
 El Proyecto consta de distintos escenarios, cada uno con sus supuestos particulares. Así mismo, las ecuaciones varían dependiendo el escenario. Las secciones en las que se divide son:
 1) [Combate sencillo](#combate-sencillo)
@@ -38,25 +38,25 @@ El Proyecto consta de distintos escenarios, cada uno con sus supuestos particula
 5) [Esparta](#esparta)
 
 
-### Combate sencillo
+#### Combate sencillo
 En esta sección, los supuestos son los mismos a los generales. Las dos tropas conocen la ubicación del 'enemigo' y disparan con una potencia de fuego determinada previamente. 
 
-### Combate entre guerrillas
+#### Combate entre guerrillas
 
 Este modelo representa el combate de 2 fuerzas que no tienen la ubicación de la fuerza contraria. Así mismo, no conocen el daño que han infligido al equipo contrario. Esto hará que concentren su fuego en una área determinada en la que creen que se encuentra el enemigo.
 
-### Vietnam
+#### Vietnam
 Este modelo es la unión del combate sencillo y del combate entre guerrillas. Una de las dos tropas es atacada por sopresa, de manera que la fuerza que embosca tiene más ventaja sobre la emboscada. Particularmente representa la batalla de EE.UU. y Vietcong. Aquí, Vietcong tiene la ventaja de ser local y conocer el territorio por lo que toma el papel de fuerza emboscadora, mientras que EE.UU. es tomada por sorpresa. 
 
-### Combate convencional
+#### Combate convencional
 
 Aquí tomamos el supuesto de que la tropas pueden recibir refuerzos. Usamos una función escalonada para modelar el número de refuerzos que llegan en cierto periodo de tiempo. Gracias a esto, los resultados de las batallas se ven más realistas a las que conocemos. 
 
-### Esparta
+#### Esparta
 
 Aquí se simula la batalla de Termópilas. Se supone que solo <img src="https://render.githubusercontent.com/render/math?math=C"> unidades de cada lado caben en el estrecho de Termópilas, por lo que las ecuaciones ahora solo toman el mínimo entre la cantidad de tropas <img src="https://render.githubusercontent.com/render/math?math=y"> y <img src="https://render.githubusercontent.com/render/math?math=C">.
 
----
+
 ## Técnicas usadas
 
 El proyecto toca varios temas aparte del propósito principal que es modelar batallas. Estos contenidos son:
@@ -73,7 +73,7 @@ Todos estos temas pudieron ocuparse gracias a las siguientes librerías de Pytho
 * [iPyWidgets](https://ipywidgets.readthedocs.io/en/stable/examples/Widget%20Basics.html)
 * [IPython.display](https://ipython.org/ipython-doc/stable/api/generated/IPython.display.html)
 
-### Ecuaciones diferenciales
+#### Ecuaciones diferenciales
 El resolver ecuaciones diferenciales de primer orden es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la librería *SimPy*. Un ejemplo del código es este: 
 ```python
 ode1 = Eq(dx,-a*y1(t))    # Declaramos la ecuación diferencial que queremos resolver
@@ -85,7 +85,7 @@ Ejecutando este código nos da el resultado de la `ode1` planteada.
 Es así como todo el proyecto puede resolverse de una manera práctica y rápida, sin el cansancio de tener que hacer todas las ecuaciones a mano. 
 
 
-### Procesos a través del tiempo
+#### Procesos a través del tiempo
 Gracias a Python, el programar una función que nos explique y nos demuestre como se ve un proceso a través del tiempo es muy sencillo. 
 Normalmente, los pasos que se siguen son: 
 
@@ -95,7 +95,7 @@ Normalmente, los pasos que se siguen son:
 
 Siguiendo esta estructura general, el graficar un proceso a través de un tiempo t es relativamente sencillo. 
 
-### Gráficas interactivas
+#### Gráficas interactivas
 Esta es una funcionalidad que da la librería *iPyWidgets*. Gracias a esto, podemos no solo graficar funciones, si no que podemos jugar con los parámetros y darles el valor que nosotros queramos mientras se encuentren en el intervalo dado. 
 Para usarlo, tenemos que tener una función en donde se de la orden de graficar cierta situación. Una vez con esto, usamos la función `interact()`:
 ```python
@@ -105,7 +105,7 @@ interact(plotModelo,a=(0,100),r=(0,100),pa=(0,100),pr=(0,100))
 Dentro de `interact()` es donde se pone la función encargada de graficar, y los parámetros que se piden se pueden poner como intervalos o como valores fijos. Aquellos que tengan intervalos serán los valores que podremos modificar una vez ejecutado el programa. 
 
 
-### Modelos basados en agentes
+#### Modelos basados en agentes
 El modelado basado en agentes es una técnica que nos permite visualizar y simular con mayor claridad cómo las conductas individuales determinan la evolución de un sistema. 
 En [este link](*https://github.com/Skalas/Matematicas-computacionales-fall2020/blob/master/week9/0-agentes.ipynb) podemos conocer más acerca de esta técnica. 
 
