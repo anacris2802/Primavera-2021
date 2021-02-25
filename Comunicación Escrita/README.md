@@ -60,7 +60,7 @@ Este modelo representa el combate de 2 fuerzas que no tienen la ubicación de la
 ### Vietnam
 Este modelo es la unión del combate sencillo y del combate entre guerrillas. Una de las dos tropas es atacada por sopresa, de manera que la fuerza que embosca tiene más ventaja sobre la emboscada. Particularmente representa la batalla de EE.UU. y Vietcong. Aquí, Vietcong tiene la ventaja de ser 'local' y conocer el territorio por lo que toma el papel de fuerza 'emboscasora', mientras que EE.UU. es tomada por sopresa. 
 
-Con este escenario, podemos ver que las fuerzas pequelas pueden tener una ventaja sobre las fuerzas grandes cuando se les ataca por sorpresa. 
+Con este escenario, podemos ver que las fuerzas pequeñas pueden tener una ventaja sobre las fuerzas grandes cuando se les ataca por sorpresa. 
 
 ##### Ecuaciones
 
@@ -77,7 +77,7 @@ Aquí tomamos el supuesto de que la tropas pueden recibir refuerzos. Usamos una 
 * <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -cx-ay+P(t)"> 
 * <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bx-dy+Q(t)"> 
 
-donde <img src="https://render.githubusercontent.com/render/math?math={d,c}">son la tasa de pérdidas operacionales (enfermedades, deserciones, etc.) -proporcional al número de las tropas, y <img src="https://render.githubusercontent.com/render/math?math={a,b}"> es la tasa de pérdidas en combate. <img src="https://render.githubusercontent.com/render/math?math={P,Q}"> es la tasa de refuerzos. 
+donde <img src="https://render.githubusercontent.com/render/math?math={d,c}"> son la tasa de pérdidas operacionales (enfermedades, deserciones, etc.), y <img src="https://render.githubusercontent.com/render/math?math={a,b}"> es la tasa de pérdidas en combate. <img src="https://render.githubusercontent.com/render/math?math={P,Q}"> es la tasa de refuerzos. 
 
 
 ### Esparta
@@ -93,14 +93,14 @@ Aquí se simula la batalla de Termópilas. Se supone que solo <img src="https://
 
 
 ---
-## Técnicas usada
+## Técnicas usadas
 
 El proyecto toca varios temas dentro del propóstio principal que es modelar batallas. Estos temas son:
 
-* [Resolución de ecuaciones diferenciales](#resolución-de-ecuaciones-diferenciales)
-* [Visualización de un proceso a través del tiempo](#visualización-de-un-proceso-a-través-del-tiempo)
-* [Graficación interactiva](#graficación-interactiva)
-* [Modelación usando agentes](#modelación-usando-agentes)
+* [Ecuaciones diferenciales](#ecuaciones-diferenciales)
+* [Procesos a través del tiempo](#procesos-a-través-del-tiempo)
+* [Gráficas interactivas](#graficas-interactivas)
+* [Modelos basados en agentes](#modelos-basados-en-agentes)
 
 Todos estos temas pudieron ocuparse gracias a las siguientes librerias de Python:
 * [NumPy](https://numpy.org/doc/stable/user/whatisnumpy.html)
@@ -109,7 +109,7 @@ Todos estos temas pudieron ocuparse gracias a las siguientes librerias de Python
 * [iPyWidgets](https://ipywidgets.readthedocs.io/en/stable/examples/Widget%20Basics.html)
 * [IPython.display](https://ipython.org/ipython-doc/stable/api/generated/IPython.display.html)
 
-### Resolución de ecuaciones diferenciales
+### Ecuaciones diferenciales
 El resolver ecuaciones diferenciales de primer orden es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la libreria *SimPy*. Un ejemplo del código es este: 
 ```python
 ode1 = Eq(dx,-a*y1(t))    # Declaramos la ecuación diferencial que queremos resolver
@@ -121,14 +121,40 @@ Ejecutando este código nos da el resultado de la `ode1` planteada.
 Es así como todo el proyecto puede resolverse de una manera práctica y rápida, sin el cansancio de tener que hacer todas las ecuaciones a mano. 
 
 
-### Visualización de un proceso a través del tiempo
+### Procesos a través del tiempo
+Gracias a Python, el programar una función que nos explique y nos demuestre como se ve un proceso a través del tiempo es muy sencillo. 
+Normalmente, los pasos que se siguen son: 
 
-### Graficación interactiva
-### Modelación usando agentes
-Agentes Use la clase agente para modelar el último escenario, suponga únicamente combate cuerpo a cuerpo, asigne una probabilidad de herir, morir y matar para los agentes que estén uno enfrente de otro. Agregue un valor de cohesión / miedo. Si pasa de un límite el miedo huye el agente. Agregue un atributo de moral. ¿Los resultados coinciden con el modelo de Lanchester?
+![alt text](/Comunicación Escrita/Images/Pasos_Proyecto.jpg)
+
+![alt text]("https://github.com/anacris2802/Primavera-2021/blob/main/Comunicaci%C3%B3n%20Escrita/Images/Pasos_Proyecto.jpg")
+
+Siguiendo esta estructura general, el graficar un proceso a través de un tiempo t es relativamente sencillo. 
+
+### Gráficas interactivasa
+Esta es una funcionalidad que da la libreria *iPyWidgets*. Gracias a esto, podemos no solo graficar funciones, si no que podemos jugar con los parámetros y darles el valor que nosotros queramos mientras se encuentren en el intervalo dado. 
+Para usarlo, tenemos que tener una función en donde se de la orden de graficar cierta situación. Una vez con esto, usamos la función `interact()`:
+```python
+interact(plotModelo,a=(0,100),r=(0,100),pa=(0,100),pr=(0,100))
+```
+
+Dentro de `interact()` es donde se pone la función encargada de graficar, y los parámetros que se piden se pueden poner como intervalos o como valores fijos. Aquellos que tengan intervalos serán los valores que podremos modificar una vez ejecutado el programa. 
+
+
+### Modelos basados en agentes
+El modelado basado en agentes es una técnica que nos permite visualizar y simular con mayor claridad cómo las conductas individuales determinan la evolución de un sistema. 
+En [este link](*https://github.com/Skalas/Matematicas-computacionales-fall2020/blob/master/week9/0-agentes.ipynb) podemos conocer más acerca de esta técnica. 
+
+Particularmente para el proyecto ocupamos el modelado basado en agentes para simular una batalla cuerpo a cuerpo, en dónde a los soldados se les agregaron distintas variables, como son: valor de cohesión/miedo, en dónde si el valor pasa de un límite dado, el agente huye; posibilidades de herir, morir y matar; y finalmente, un atributo moral. 
 
 ---
 ## Ejemplo de uso
+El proyecto se encuentra en un Jupyter Notebook, por lo que es necesario ejecutarlo para que pueda funcionar. Una vez hecho esto, podemos observar que las gráficas interactivas cuentan con barras en la parte superior dónde podemos deslizar el punto para cambiar los valores:
+![alt text](Comunicación Escrita/Images/imagen_proyecto.jpg)
+
+Así, podemos personalizar las batallas y ver los distintos resultados que pueden ocasionar el tener menos o más tropas, menor o mayor potencia de ataque, etc. 
+
+Espero disfrutes de jugar con las gráficas y los escenarios tanto como nosotros al crearlo! 
 
 
 [*Leyes de Lanchester*]:https://es.wikipedia.org/wiki/Leyes_de_Lanchester#:~:text=Las%20leyes%20de%20Lanchester%20(en,fuego%20en%20funci%C3%B3n%20del%20tiempo.
