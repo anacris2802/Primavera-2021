@@ -5,9 +5,9 @@
 ---
 # Contenido:
 
-* [Información general](*información-general)
+* [Información general](*informacion-general)
 * [Escenarios](*escenarios)
-* [Técnicas usadas](*técnicas-usadas)
+* [Técnicas usadas](*tecnicas-usadas)
 * [Ejemplo de uso](*ejemplo-de-uso)
     
     
@@ -30,7 +30,7 @@ Los supuestos básicos del proyecto son:
 
 ---
 ## Escenarios
-El Proyecto consta de distintos escenarios, cada uno con sus supuestos particulares. Las secciones en las que se divide son:
+El Proyecto consta de distintos escenarios, cada uno con sus supuestos particulares. Así mismo, las ecuaciones varían dependiendo el escenario. Las secciones en las que se divide son:
 1) [Combate sencillo](#combate-sencillo)
 2) [Combate entre guerrillas](#combate-entre-guerrillas)
 3) [Vietnam](#vietnam)
@@ -40,57 +40,21 @@ El Proyecto consta de distintos escenarios, cada uno con sus supuestos particula
 
 ### Combate sencillo
 En esta sección, los supuestos son los mismos a los generales. Las dos tropas conocen la ubicación del 'enemigo' y disparan con una potencia de fuego determinada previamente. 
-##### Ecuaciones:
-* <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -ay ">
-* <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bx ">
-
-
 
 ### Combate entre guerrillas
 
 Este modelo representa el combate de 2 fuerzas que no tienen la ubicación de la fuerza contraria. Así mismo, no conocen el daño que han infligido al equipo contrario. Esto hará que concentren su fuego en una área determinada en la que creen que se encuentra el enemigo.
 
-##### Ecuaciones:
-
-* <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -axy"> 
-* <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bxy"> 
-
-
-
 ### Vietnam
 Este modelo es la unión del combate sencillo y del combate entre guerrillas. Una de las dos tropas es atacada por sopresa, de manera que la fuerza que embosca tiene más ventaja sobre la emboscada. Particularmente representa la batalla de EE.UU. y Vietcong. Aquí, Vietcong tiene la ventaja de ser local y conocer el territorio por lo que toma el papel de fuerza emboscadora, mientras que EE.UU. es tomada por sorpresa. 
-
-Con este escenario, podemos ver que fuerzas pequeñas pueden tener una ventaja sobre fuerzas grandes cuando se les ataca por sorpresa. 
-
-##### Ecuaciones
-
-* <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -axy"> 
-* <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bx"> 
-
 
 ### Combate convencional
 
 Aquí tomamos el supuesto de que la tropas pueden recibir refuerzos. Usamos una función escalonada para modelar el número de refuerzos que llegan en cierto periodo de tiempo. Gracias a esto, los resultados de las batallas se ven más realistas a las que conocemos. 
 
-##### Ecuaciones
-
-* <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -cx-ay+P(t)"> 
-* <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bx-dy+Q(t)"> 
-
-donde <img src="https://render.githubusercontent.com/render/math?math={d,c}"> son la tasa de pérdidas operacionales (enfermedades, deserciones, etc.), y <img src="https://render.githubusercontent.com/render/math?math={a,b}"> es la tasa de pérdidas en combate. <img src="https://render.githubusercontent.com/render/math?math={P,Q}"> es la tasa de refuerzos. 
-
-
 ### Esparta
 
 Aquí se simula la batalla de Termópilas. Se supone que solo <img src="https://render.githubusercontent.com/render/math?math=C"> unidades de cada lado caben en el estrecho de Termópilas, por lo que las ecuaciones ahora solo toman el mínimo entre la cantidad de tropas <img src="https://render.githubusercontent.com/render/math?math=y"> y <img src="https://render.githubusercontent.com/render/math?math=C">.
-
-##### Ecuaciones
-
-* <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -a \min(y,C)"> 
-* <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -b \min(x,C)"> 
-
-
-
 
 ---
 ## Técnicas usadas
