@@ -41,9 +41,8 @@ El Proyecto consta de distintos escenarios, cada uno con sus supuestos particula
 ### Combate sencillo
 En esta sección, los supuestos son los mismos a los generales. Las dos tropas conocen la ubicación del 'enemigo' y disparan con una potencia de fuego determinada previamente. 
 ##### Ecuaciones:
- <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -ay ">
-  
- <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bx ">
+* <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -ay ">
+* <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bx ">
 
 
 
@@ -53,8 +52,8 @@ Este modelo representa el combate de 2 fuerzas que no tienen la ubicación de la
 
 ##### Ecuaciones:
 
-<img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -axy"> 
-<img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bxy"> 
+* <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -axy"> 
+* <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bxy"> 
 
 
 
@@ -64,8 +63,9 @@ Este modelo es la unión del combate sencillo y del combate entre guerrillas. Un
 Con este escenario, podemos ver que las fuerzas pequelas pueden tener una ventaja sobre las fuerzas grandes cuando se les ataca por sorpresa. 
 
 ##### Ecuaciones
-<img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -axy"> 
-<img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bx"> 
+
+* <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -axy"> 
+* <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bx"> 
 
 
 ### Combate convencional
@@ -73,9 +73,11 @@ Con este escenario, podemos ver que las fuerzas pequelas pueden tener una ventaj
 Aquí tomamos el supuesto de que la tropas pueden recibir refuerzos. Usamos una función escalonada para modelar el número de refuerzos que llegan en cierto perodo de tiempo. Gracias a esto, los resultados de las batallas se ven más realistas a las que conocemos. 
 
 ##### Ecuaciones
-<img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -cx-ay+P(t)"> 
-<img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bx-dy+Q(t)"> 
-donde <img src="https://render.githubusercontent.com/render/math?math={d,c}"> son la tasa de pérdidas operacionales (enfermedades, deserciones, etc.) -proporcional al número de las tropas, y <img src="https://render.githubusercontent.com/render/math?math={a,b}"> es la tasa de pérdidas en combate. <img src="https://render.githubusercontent.com/render/math?math={P,Q}"> es la tasa de refuerzos. 
+
+* <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -cx-ay+P(t)"> 
+* <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -bx-dy+Q(t)"> 
+
+donde <img src="https://render.githubusercontent.com/render/math?math={d,c}">son la tasa de pérdidas operacionales (enfermedades, deserciones, etc.) -proporcional al número de las tropas, y <img src="https://render.githubusercontent.com/render/math?math={a,b}"> es la tasa de pérdidas en combate. <img src="https://render.githubusercontent.com/render/math?math={P,Q}"> es la tasa de refuerzos. 
 
 
 ### Esparta
@@ -83,8 +85,9 @@ donde <img src="https://render.githubusercontent.com/render/math?math={d,c}"> so
 Aquí se simula la batalla de Termópilas. Se supone que solo <img src="https://render.githubusercontent.com/render/math?math=C"> unidades de cada lado caben en el estrecho de Termópilas, por lo que las ecuaciones ahora solo toman el mínimo entre la cantidad de tropas <img src="https://render.githubusercontent.com/render/math?math=y"> y <img src="https://render.githubusercontent.com/render/math?math=C">.
 
 ##### Ecuaciones
-<img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -a \min(y,C)"> 
-<img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -b \min(x,C)"> 
+
+* <img src="https://render.githubusercontent.com/render/math?math=\frac{dx}{dt} = -a \min(y,C)"> 
+* <img src="https://render.githubusercontent.com/render/math?math=\frac{dy}{dt} = -b \min(x,C)"> 
 
 
 
@@ -107,10 +110,25 @@ Todos estos temas pudieron ocuparse gracias a las siguientes librerias de Python
 * [IPython.display](https://ipython.org/ipython-doc/stable/api/generated/IPython.display.html)
 
 ### Resolución de ecuaciones diferenciales
+El resolver ecuaciones diferenciales de primer orden es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la libreria *SimPy*. Un ejemplo del código es este: 
+```python
+ode1 = Eq(dx,-a*y1(t))    # Declaramos la ecuación diferencial que queremos resolver
+dsolve(ode1)              # Resolvemos con el método de SimPy
+
+```
+Ejecutando este código nos da el resultado de la `ode1` planteada. 
+
+Es así como todo el proyecto puede resolverse de una manera práctica y rápida, sin el cansancio de tener que hacer todas las ecuaciones a mano. 
+
+
 ### Visualización de un proceso a través del tiempo
+
 ### Graficación interactiva
 ### Modelación usando agentes
 Agentes Use la clase agente para modelar el último escenario, suponga únicamente combate cuerpo a cuerpo, asigne una probabilidad de herir, morir y matar para los agentes que estén uno enfrente de otro. Agregue un valor de cohesión / miedo. Si pasa de un límite el miedo huye el agente. Agregue un atributo de moral. ¿Los resultados coinciden con el modelo de Lanchester?
+
+---
+## Ejemplo de uso
 
 
 [*Leyes de Lanchester*]:https://es.wikipedia.org/wiki/Leyes_de_Lanchester#:~:text=Las%20leyes%20de%20Lanchester%20(en,fuego%20en%20funci%C3%B3n%20del%20tiempo.
