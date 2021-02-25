@@ -31,7 +31,7 @@ Los supuestos básicos del proyecto son:
 ---
 ## Escenarios
 El Proyecto consta de distintos escenarios, cada uno con sus supuestos particulares. Las secciones en las que se divide son:
-1) [Combate sencillo](#combate sencillo)
+1) [Combate sencillo](#combate-sencillo)
 2) [Combate entre guerrillas](#combate-entre-guerrillas)
 3) [Vietnam](#vietnam)
 4) [Combate convencional](#combate-convencional)
