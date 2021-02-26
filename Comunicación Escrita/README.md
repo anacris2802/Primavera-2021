@@ -3,7 +3,7 @@
 > El objetivo de este proyecto es simular distintos escenarios de batalla utilizando ecuaciones diferenciales implementadas en Python. 
 
 ---
-# Contenido:
+## Contenido:
 
 * [Información general](#información-general)
 * [Escenarios](#escenarios)
