@@ -46,7 +46,7 @@ En esta sección, los supuestos son los mismos a los generales. Las dos tropas c
 Este modelo representa el combate de 2 fuerzas que no tienen la ubicación de la fuerza contraria. Así mismo, no conocen el daño que han infligido al equipo contrario. Esto hará que concentren su fuego en una área determinada en la que creen que se encuentra el enemigo.
 
 ### Vietnam
-Este modelo es la unión del combate sencillo y del combate entre guerrillas. Una de las dos tropas es atacada por sopresa, de manera que la fuerza que embosca tiene más ventaja sobre la emboscada. Particularmente representa la batalla de EE.UU. y Vietcong. Aquí, Vietcong tiene la ventaja de ser local y conocer el territorio por lo que toma el papel de fuerza emboscadora, mientras que EE.UU. es tomada por sorpresa. 
+Este modelo es la unión del combate sencillo y del combate entre guerrillas. Una de las dos tropas es atacada por sorpresa, de manera que la fuerza que embosca tiene más ventaja sobre la emboscada. Particularmente representa la batalla de EE.UU. y Vietcong. Aquí, Vietcong tiene la ventaja de ser local y conocer el territorio por lo que toma el papel de fuerza emboscadora, mientras que EE.UU. es tomada por sorpresa. 
 
 ### Combate convencional
 
