@@ -74,7 +74,7 @@ Todos estos temas pudieron implementarse gracias a las siguientes librerías de 
 * [IPython.display](https://ipython.org/ipython-doc/stable/api/generated/IPython.display.html)
 
 ### Ecuaciones diferenciales
-El resolver [ecuaciones diferenciales de primer orden](#https://youtu.be/1n8Rv2eEVR0) es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la librería *SimPy*. Un ejemplo del código es este: 
+El resolver [ecuaciones diferenciales de primer orden] es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la librería *SimPy*. Un ejemplo del código es este: 
 ```python
 ode1 = Eq(dx,-a*y1(t))    # Declaramos la ecuación diferencial que queremos resolver
 dsolve(ode1)              # Resolvemos con el método de SimPy
@@ -105,7 +105,7 @@ Dentro de `interact()` es donde se pone la función encargada de graficar, y los
 
 ### Modelos basados en agentes
 El modelado basado en agentes es una técnica que nos permite visualizar y simular con mayor claridad cómo las conductas individuales determinan la evolución de un sistema. 
-En [este link](*https://github.com/Skalas/Matematicas-computacionales-fall2020/blob/master/week9/0-agentes.ipynb) podemos conocer más acerca de esta técnica. 
+En [este link] podemos conocer más acerca de esta técnica. 
 
 Particularmente para el proyecto ocupamos el modelado basado en agentes para simular una batalla cuerpo a cuerpo, en dónde a los soldados se les agregaron distintas variables, como son: valor de cohesión/miedo, en dónde si el valor pasa de un límite dado, el agente huye; posibilidades de herir, morir y matar; y finalmente, un atributo moral. 
 
@@ -122,3 +122,5 @@ Así, podemos personalizar las batallas y ver los distintos resultados que puede
 
 
 [*Leyes de Lanchester*]:https://es.wikipedia.org/wiki/Leyes_de_Lanchester#:~:text=Las%20leyes%20de%20Lanchester%20(en,fuego%20en%20funci%C3%B3n%20del%20tiempo.
+[ecuaciones diferenciales de primer orden]:https://youtu.be/1n8Rv2eEVR0
+[este link]:https://github.com/Skalas/Matematicas-computacionales-fall2020/blob/master/week9/0-agentes.ipynb
