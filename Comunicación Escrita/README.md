@@ -50,7 +50,7 @@ Este modelo es la unión del combate sencillo y del combate entre guerrillas. Un
 
 ### Combate convencional
 
-Aquí tomamos el supuesto de que la tropas pueden recibir refuerzos. Usamos una función escalonada para modelar el número de refuerzos que llegan en cierto periodo de tiempo. Gracias a esto, los resultados de las batallas se ven más realistas a las que conocemos. 
+Aquí tomamos el supuesto de que la tropas pueden recibir refuerzos. Usamos una función escalonada para modelar el número de refuerzos que llegan en cierto periodo de tiempo. Gracias a esto, los resultados de las batallas se ven más cercanos a los que conocemos. 
 
 ### Esparta
 
@@ -66,7 +66,7 @@ El proyecto toca varios temas aparte del propósito principal que es modelar bat
 * [Gráficas interactivas](#graficas-interactivas)
 * [Modelos basados en agentes](#modelos-basados-en-agentes)
 
-Todos estos temas pudieron ocuparse gracias a las siguientes librerías de Python:
+Todos estos temas pudieron implementarse gracias a las siguientes librerías de Python:
 * [NumPy](https://numpy.org/doc/stable/user/whatisnumpy.html)
 * [SimPy](https://simpy.readthedocs.io/en/latest/)
 * [Matplotlib](https://matplotlib.org/stable/index.html)
@@ -74,7 +74,7 @@ Todos estos temas pudieron ocuparse gracias a las siguientes librerías de Pytho
 * [IPython.display](https://ipython.org/ipython-doc/stable/api/generated/IPython.display.html)
 
 ### Ecuaciones diferenciales
-El resolver [ecuaciones diferenciales de primer orden](*https://es.khanacademy.org/math/differential-equations/first-order-differential-equations/differential-equations-intro/v/differential-equation-introduction?modal=1) es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la librería *SimPy*. Un ejemplo del código es este: 
+El resolver [ecuaciones diferenciales de primer orden](#https://youtu.be/1n8Rv2eEVR0) es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la librería *SimPy*. Un ejemplo del código es este: 
 ```python
 ode1 = Eq(dx,-a*y1(t))    # Declaramos la ecuación diferencial que queremos resolver
 dsolve(ode1)              # Resolvemos con el método de SimPy
