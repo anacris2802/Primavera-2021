@@ -74,7 +74,7 @@ Todos estos temas pudieron ocuparse gracias a las siguientes librerías de Pytho
 * [IPython.display](https://ipython.org/ipython-doc/stable/api/generated/IPython.display.html)
 
 ### Ecuaciones diferenciales
-El resolver ecuaciones diferenciales de primer orden es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la librería *SimPy*. Un ejemplo del código es este: 
+El resolver [ecuaciones diferenciales de primer orden](*https://youtu.be/1n8Rv2eEVR0) es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la librería *SimPy*. Un ejemplo del código es este: 
 ```python
 ode1 = Eq(dx,-a*y1(t))    # Declaramos la ecuación diferencial que queremos resolver
 dsolve(ode1)              # Resolvemos con el método de SimPy
@@ -89,7 +89,7 @@ Es así como todo el proyecto puede resolverse de una manera práctica y rápida
 Gracias a Python, el programar una función que nos explique y nos demuestre como se ve un proceso a través del tiempo es muy sencillo. 
 Normalmente, los pasos que se siguen son: 
 
-![](https://github.com/anacris2802/Primavera-2021/blob/main/Comunicaci%C3%B3n%20Escrita/Images/Pasos_Proyecto.jpg)
+![](https://github.com/anacris2802/Primavera-2021/blob/main/Comunicaci%C3%B3n%20Escrita/Images/Pasos_funci%C3%B3n_proyecto.jpg)
 
 Siguiendo esta estructura general, el graficar un proceso a través de un tiempo t es relativamente sencillo. 
 
