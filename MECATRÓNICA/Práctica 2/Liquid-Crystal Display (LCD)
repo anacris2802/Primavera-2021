@@ -1,0 +1,39 @@
+#include <LiquidCrystal.h>  
+// include the library code:
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);// initialize the interface pins
+
+void setup() {
+  lcd.begin(16, 2);// set up the LCD's number of columns and rows:
+  }
+
+/*  Código para desplegar 'Principios de Mecatrónica y hacer que parpadee'
+  void loop() {
+  lcd.setCursor(1, 0);
+  lcd.print("Principios de:");// Print a message to the LCD.
+  lcd.setCursor(2, 1);lcd.print("Mecatronica");
+  
+  delay(750);
+  
+  lcd.setCursor(1, 0);
+  lcd.print("                ");// Print a message to the LCD.
+  lcd.setCursor(2, 1);lcd.print("                ");
+  
+  delay(250);
+	}
+*/
+
+void loop(){
+  
+  for(int i=16; i>=0;i--){
+    lcd.clear();
+    lcd.setCursor(i,0);
+    lcd.print("Ana Cristina");
+    lcd.setCursor(i,1);
+    lcd.print("Sánchez");
+    delay(750);
+  }
+}
+
+
+
+
