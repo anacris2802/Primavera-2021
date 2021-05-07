@@ -29,6 +29,7 @@ Los supuestos básicos del proyecto son:
 * La potencia de fuego está basada en el entrenamiento, equipo, etc.
 
 
+
 ---
 ## Escenarios
 El Proyecto consta de distintos escenarios, cada uno con sus supuestos particulares. Así mismo, las ecuaciones varían dependiendo el escenario. Las secciones en las que se divide son:
