@@ -3,7 +3,7 @@
 > El objetivo de este proyecto es simular distintos escenarios de batalla utilizando ecuaciones diferenciales implementadas en Python. 
 
 ---
-## Contenido:
+## Contenido
 
 * [Información general](#información-general)
 * [Escenarios](#escenarios)
@@ -21,24 +21,24 @@ Para modelar las batallas, se usan las [*Leyes de Lanchester*]:
   
   con condiciones iniciales  <img src="https://render.githubusercontent.com/render/math?math=x(0) = x_0"> y  <img src="https://render.githubusercontent.com/render/math?math=y(0) = y_0">.
   
-Los supuestos básicos del proyecto son: 
-* Los contrincantes son dos: azules y rojos
-* Los principales factores que deciden el resultado de la batalla son el número de tropas y el entrenamiento/equipo.
+Los supuestos básicos del proyecto son los siguientes: 
+* Los contrincantes son los azules y los rojos
+* Los principales factores que deciden el resultado de la batalla son el número de tropas y el entrenamiento o equipo.
 * El número de tropas azules y rojas son <img src="https://render.githubusercontent.com/render/math?math=x"> y <img src="https://render.githubusercontent.com/render/math?math=y"> respectivamente.
 * La potencia de fuego azul y roja es <img src="https://render.githubusercontent.com/render/math?math=a"> y <img src="https://render.githubusercontent.com/render/math?math=b"> respectivamente.
 * La potencia de fuego está basada en el entrenamiento, equipo, etc.
 
 
-
 ---
 ## Escenarios
-El Proyecto consta de distintos escenarios, cada uno con sus supuestos particulares. Así mismo, las ecuaciones varían dependiendo el escenario. Las secciones en las que se divide son:
+Se tienen distintos escenarios, cada uno con sus supuestos particulares: 
 1) [Combate sencillo](#combate-sencillo)
 2) [Combate entre guerrillas](#combate-entre-guerrillas)
 3) [Vietnam](#vietnam)
 4) [Combate convencional](#combate-convencional)
 5) [Esparta](#esparta)
 
+Es importante mencionar que cada las ecuaciones varían dependiendo del escenario.
 
 ### Combate sencillo
 En esta sección, los supuestos son los mismos a los generales. Las dos tropas conocen la ubicación del 'enemigo' y disparan con una potencia de fuego determinada previamente. 
@@ -61,7 +61,7 @@ Aquí se simula la batalla de Termópilas. Se supone que solo <img src="https://
 ---
 ## Técnicas usadas
 
-El proyecto toca varios temas aparte del propósito principal que es modelar batallas. Estos contenidos son:
+El proyecto toca varios temas aparte del propósito principal que es modelar batallas:
 
 * [Ecuaciones diferenciales](#ecuaciones-diferenciales)
 * [Procesos a través del tiempo](#procesos-a-través-del-tiempo)
@@ -76,7 +76,7 @@ Todos estos temas pudieron implementarse gracias a las siguientes librerías de 
 * [IPython.display](https://ipython.org/ipython-doc/stable/api/generated/IPython.display.html)
 
 ### Ecuaciones diferenciales
-El resolver [ecuaciones diferenciales de primer orden] es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la librería *SimPy*. Un ejemplo del código es este: 
+El resolver [ecuaciones diferenciales de primer orden] es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la librería *SimPy*. Un ejemplo del código es el siguiente: 
 ```python
 ode1 = Eq(dx,-a*y1(t))    # Declaramos la ecuación diferencial que queremos resolver
 dsolve(ode1)              # Resolvemos con el método de SimPy
@@ -89,14 +89,14 @@ Es así como todo el proyecto puede resolverse de una manera práctica y rápida
 
 ### Procesos a través del tiempo
 Gracias a Python, el programar una función que nos explique y nos demuestre como se ve un proceso a través del tiempo es muy sencillo. 
-Normalmente, los pasos que se siguen son: 
+Normalmente, los pasos que se siguen son los siguientes: 
 
 ![](https://github.com/anacris2802/Primavera-2021/blob/main/Comunicaci%C3%B3n%20Escrita/Images/Pasos_funci%C3%B3n_proyecto.jpg)
 
 Siguiendo esta estructura general, el graficar un proceso a través de un tiempo t es relativamente sencillo. 
 
 ### Gráficas interactivas
-Esta es una funcionalidad que da la librería *iPyWidgets*. Gracias a esto, podemos no solo graficar funciones, si no que podemos jugar con los parámetros y darles el valor que nosotros queramos mientras se encuentren en el intervalo dado. 
+Gracias a la libreria *iPyWidgets* podemos jugar con los parámetros y darles el valor que nosotros queramos mientras se encuentren en el intervalo dado. 
 Para usarlo, tenemos que tener una función en donde se de la orden de graficar cierta situación. Una vez con esto, usamos la función `interact()`:
 ```python
 interact(plotModelo,a=(0,100),r=(0,100),pa=(0,100),pr=(0,100))
