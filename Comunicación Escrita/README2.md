@@ -113,7 +113,7 @@ Aquí se modeló una batalla cuerpo a cuerpo, en dónde a los soldados se les ag
 
 ---
 ## Ejemplo de uso
-El proyecto se encuentra en un Jupyter Notebook, por lo que es necesario ejecutarlo para que pueda funcionar. Una vez hecho esto, podemos observar que las gráficas interactivas cuentan con barras en la parte superior dónde podemos deslizar el punto para cambiar los valores:
+El código se encuentra en un Jupyter Notebook, por lo que es necesario ejecutarlo para que pueda funcionar. Una vez hecho esto, podemos observar que las gráficas interactivas cuentan con barras en la parte superior dónde podemos deslizar el punto para cambiar los valores:
 
 ![](https://github.com/anacris2802/Primavera-2021/blob/main/Comunicaci%C3%B3n%20Escrita/Images/imagen_proyecto.jpg)
 
