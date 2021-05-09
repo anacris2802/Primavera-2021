@@ -52,7 +52,7 @@ Este modelo es la unión del combate sencillo y del combate entre guerrillas. Un
 
 ### Combate convencional
 
-Aquí tomamos el supuesto de que la tropas pueden recibir refuerzos. Usamos una función escalonada para modelar el número de refuerzos que llegan en cierto periodo de tiempo. Gracias a esto, los resultados de las batallas se ven más cercanos a los que conocemos. 
+Aquí tomamos el supuesto de que la tropas pueden recibir refuerzos. Usamos una [función escalonada] para modelar el número de refuerzos que llegan en cierto periodo de tiempo. Gracias a esto, los resultados de las batallas se ven más cercanos a los que conocemos. 
 
 ### Esparta
 
@@ -61,7 +61,7 @@ Aquí se simula la batalla de Termópilas. Se supone que solo <img src="https://
 ---
 ## Técnicas usadas
 
-El proyecto toca varios temas aparte del propósito principal que es modelar batallas:
+Se tocan varios temas aparte del propósito principal que es modelar batallas:
 
 * [Ecuaciones diferenciales](#ecuaciones-diferenciales)
 * [Procesos a través del tiempo](#procesos-a-través-del-tiempo)
@@ -76,7 +76,7 @@ Todos estos temas pudieron implementarse gracias a las siguientes librerías de 
 * [IPython.display](https://ipython.org/ipython-doc/stable/api/generated/IPython.display.html)
 
 ### Ecuaciones diferenciales
-El resolver [ecuaciones diferenciales de primer orden] es uno de los temas centrales del proyecto. Para esto se usa el método `dsolve(ode)` incluido en la librería *SimPy*. Un ejemplo del código es el siguiente: 
+El resolver [ecuaciones diferenciales de primer orden] es uno de los tópicos centrales. Para esto se usa el método `dsolve(ode)` incluido en la librería *SimPy*. Un ejemplo del código es el siguiente: 
 ```python
 ode1 = Eq(dx,-a*y1(t))    # Declaramos la ecuación diferencial que queremos resolver
 dsolve(ode1)              # Resolvemos con el método de SimPy
@@ -97,7 +97,7 @@ Siguiendo esta estructura general, el graficar un proceso a través de un tiempo
 
 ### Gráficas interactivas
 Gracias a la libreria *iPyWidgets* podemos jugar con los parámetros y darles el valor que nosotros queramos mientras se encuentren en el intervalo dado. 
-Para usarlo, tenemos que tener una función en donde se de la orden de graficar cierta situación. Una vez con esto, usamos la función `interact()`:
+Para usarlo, debemos tener una función en donde se de la orden de graficar cierta situación. Una vez con esto, usamos la función `interact()`:
 ```python
 interact(plotModelo,a=(0,100),r=(0,100),pa=(0,100),pr=(0,100))
 ```
@@ -109,7 +109,7 @@ Dentro de `interact()` es donde se pone la función encargada de graficar, y los
 El modelado basado en agentes es una técnica que nos permite visualizar y simular con mayor claridad cómo las conductas individuales determinan la evolución de un sistema. 
 En [este link] podemos conocer más acerca de esta técnica. 
 
-Particularmente para el proyecto ocupamos el modelado basado en agentes para simular una batalla cuerpo a cuerpo, en dónde a los soldados se les agregaron distintas variables, como son: valor de cohesión/miedo, en dónde si el valor pasa de un límite dado, el agente huye; posibilidades de herir, morir y matar; y finalmente, un atributo moral. 
+Aquí se modeló una batalla cuerpo a cuerpo, en dónde a los soldados se les agregaron distintas variables, como son: valor de cohesión/miedo, en dónde si el valor pasa de un límite dado, el agente huye; posibilidades de herir, morir y matar; y finalmente, un atributo moral. 
 
 ---
 ## Ejemplo de uso
@@ -126,3 +126,4 @@ Así, podemos personalizar las batallas y ver los distintos resultados que puede
 [*Leyes de Lanchester*]:https://es.wikipedia.org/wiki/Leyes_de_Lanchester#:~:text=Las%20leyes%20de%20Lanchester%20(en,fuego%20en%20funci%C3%B3n%20del%20tiempo.
 [ecuaciones diferenciales de primer orden]:https://youtu.be/1n8Rv2eEVR0
 [este link]:https://github.com/Skalas/Matematicas-computacionales-fall2020/blob/master/week9/0-agentes.ipynb
+[función escalonada]:https://www.lifeder.com/funcion-escalonada/
