@@ -96,7 +96,7 @@ Normalmente, los pasos que se siguen son los siguientes:
 Siguiendo esta estructura general, el graficar un proceso a través de un tiempo t es relativamente sencillo. 
 
 ### Gráficas interactivas
-Gracias a la libreria *iPyWidgets* podemos jugar con los parámetros y darles el valor que nosotros queramos mientras se encuentren en el intervalo dado. 
+Gracias a la librería *iPyWidgets* podemos jugar con los parámetros y darles el valor que nosotros queramos mientras se encuentren en el intervalo dado. 
 Para usarlo, debemos tener una función en donde se de la orden de graficar cierta situación. Una vez con esto, usamos la función `interact()`:
 ```python
 interact(plotModelo,a=(0,100),r=(0,100),pa=(0,100),pr=(0,100))
@@ -120,7 +120,7 @@ El código se encuentra en un Jupyter Notebook, por lo que es necesario ejecutar
 Así, podemos personalizar las batallas y ver los distintos resultados que pueden ocasionar el tener menos o más tropas, menor o mayor potencia de ataque, etc. 
 
 
-> Espero disfrutes de jugar con las gráficas y los escenarios tanto como nosotros al crearlo! 
+> ¡Espero disfrutes de jugar con las gráficas y los escenarios tanto como nosotros al crearlo! 
 
 
 [*Leyes de Lanchester*]:https://es.wikipedia.org/wiki/Leyes_de_Lanchester#:~:text=Las%20leyes%20de%20Lanchester%20(en,fuego%20en%20funci%C3%B3n%20del%20tiempo.
