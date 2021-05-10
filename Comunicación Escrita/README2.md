@@ -52,7 +52,7 @@ Este modelo es la unión del combate sencillo y del combate entre guerrillas. Un
 
 ### Combate convencional
 
-Aquí tomamos el supuesto de que la tropas pueden recibir refuerzos. Usamos una [función escalonada] para modelar el número de refuerzos que llegan en cierto periodo de tiempo. Gracias a esto, los resultados de las batallas se ven más cercanos a los que conocemos. 
+Aquí tomamos el supuesto de que las tropas pueden recibir refuerzos. Usamos una [función escalonada] para modelar el número de refuerzos que llegan en cierto periodo de tiempo. Gracias a esto, los resultados de las batallas se ven más cercanos a los que conocemos. 
 
 ### Esparta
 
